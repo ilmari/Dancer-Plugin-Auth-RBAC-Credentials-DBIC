@@ -54,5 +54,4 @@ Auth::RBAC:
       login_field: username
       password_field: passphrase
       password_type: self_check
-      role_relation: roles
       role_name_field: rolename

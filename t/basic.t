@@ -47,3 +47,5 @@ DBIC:
 Auth::RBAC:
   credentials:
     class: DBIC
+    options:
+      role_relation:

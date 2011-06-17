@@ -44,7 +44,7 @@ sub authorize {
         my $password_type = $options->{password_type} ||= "clear";
         my $id_field = $options->{id_field} ||= "id";
         my $name_field = $options->{name_field} ||= "name";
-        my $role_relation = $options->{role_relation};
+        my $role_relation = exists($options->{role_relation}) ? $options->{role_relation} : "roles";
         my $role_name_field = $options->{role_name_field} ||= "name";
         my $user_rs = schema($options->{handle})->resultset($moniker);
 
@@ -54,7 +54,7 @@ sub authorize {
                     id => $user->$id_field,
                     name => $user->$name_field,
                     login => $user->$login_field,
-                    roles => $role_relation ? [ $user->$role_relation->get_column($role_name_field)->all ] : [],
+                    roles => defined($role_relation) ? [ $user->$role_relation->get_column($role_name_field)->all ] : [],
                     error => [],
                 });
             }
@@ -158,7 +158,7 @@ Default C<name>.
 =item role_relation
 
 The name of the relationship to get the roles of a user.
-Default C<roles>.
+Default C<roles>.  Set to C<undef> if you're not using roles.
     
 =item role_name_field
 
