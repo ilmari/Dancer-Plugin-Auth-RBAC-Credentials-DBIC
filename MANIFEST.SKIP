@@ -1,0 +1,10 @@
+^\.
+build\b
+blib\b
+\.bak$
+^Makefile(:?\.old)?$
+^Dancer-Plugin-Auth-RBAC-Credentials-DBIC-
+~$
+^\.#
+^#.*#$
+^MANIFEST.SKIP$
