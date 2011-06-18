@@ -91,7 +91,7 @@ Default C<name>.
 =item role_relation
 
 The name of the relationship to get the roles of a user.
-Default C<roles>.
+Default C<roles>.  Set to C<undef> if you're not using roles.
 
 =item role_name_field
 
