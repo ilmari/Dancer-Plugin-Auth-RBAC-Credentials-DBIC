@@ -1,6 +1,8 @@
 Revision history for Dancer-Plugin-Auth-RBAC-Credentials-DBIC
 
 {{$NEXT}}
+
+0.002     2011-06-20 16:46:30 Europe/London
  - Require SQL::Translator for tests
  - Document handle config option
 
