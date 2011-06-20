@@ -15,6 +15,7 @@ my %WriteMakefileArgs = (
     'DBIx::Class::Core' => '0',
     'DBIx::Class::Schema' => '0',
     'File::Temp' => '0',
+    'SQL::Translator' => '0.11006',
     'Test::More' => '0',
     'ok' => '0'
   },
@@ -30,7 +31,7 @@ my %WriteMakefileArgs = (
     'Dancer::Plugin::DBIC' => '0',
     'parent' => '0'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

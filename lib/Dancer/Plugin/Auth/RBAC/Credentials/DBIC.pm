@@ -1,6 +1,6 @@
 package Dancer::Plugin::Auth::RBAC::Credentials::DBIC;
 BEGIN {
-  $Dancer::Plugin::Auth::RBAC::Credentials::DBIC::VERSION = '0.001';
+  $Dancer::Plugin::Auth::RBAC::Credentials::DBIC::VERSION = '0.002';
 }
 # ABSTRACT: Dancer::Plugin::Auth::RBAC authentication via DBIx::Class
 
@@ -87,7 +87,7 @@ Dancer::Plugin::Auth::RBAC::Credentials::DBIC - Dancer::Plugin::Auth::RBAC authe
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -124,6 +124,11 @@ Minimal example:
 The following config options are avaialable:
 
 =over
+
+=item handle
+
+The handle of the L<Dancer::Plugin::DBIC> schema to use.
+Only needed if you have more than one schema defined.
 
 =item user_moniker
 

@@ -3,7 +3,7 @@ NAME
     Dancer::Plugin::Auth::RBAC authentication via DBIx::Class
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
         # in your app code
@@ -33,6 +33,10 @@ CONFIGURATION
               class: DBIC
 
     The following config options are avaialable:
+
+    handle
+        The handle of the Dancer::Plugin::DBIC schema to use. Only needed if
+        you have more than one schema defined.
 
     user_moniker
         The moniker for the result source which holds your users. Default
