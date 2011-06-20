@@ -4,7 +4,7 @@
       "Dagfinn Ilmari Manns\u00c3\u00a5ker <ilmari@photobox.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200007, CPAN::Meta::Converter version 2.110440",
+   "generated_by" : "Dist::Zilla version 4.200007, CPAN::Meta::Converter version 2.110930",
    "license" : [
       "perl_5"
    ],
