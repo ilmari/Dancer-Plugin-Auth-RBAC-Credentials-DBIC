@@ -3,6 +3,8 @@ package TestSchema;
 use strict;
 use warnings;
 
+use SQL::Translator 0.11006;    # needed for ->deploy
+
 use parent 'DBIx::Class::Schema';
 
 __PACKAGE__->load_namespaces;
