@@ -109,6 +109,11 @@ The following config options are avaialable:
 
 =over
 
+=item handle
+
+The handle of the L<Dancer::Plugin::DBIC> schema to use.
+Only needed if you have more than one schema defined.
+
 =item user_moniker
 
 The moniker for the result source which holds your users.
