@@ -1,6 +1,6 @@
 package Dancer::Plugin::Auth::RBAC::Credentials::DBIC;
 BEGIN {
-  $Dancer::Plugin::Auth::RBAC::Credentials::DBIC::VERSION = '0.002';
+  $Dancer::Plugin::Auth::RBAC::Credentials::DBIC::VERSION = '0.003'; # TRIAL
 }
 # ABSTRACT: Dancer::Plugin::Auth::RBAC authentication via DBIx::Class
 
@@ -8,7 +8,7 @@ use strict;
 use warnings;
 
 use parent 'Dancer::Plugin::Auth::RBAC::Credentials';
-use Dancer::Plugin::DBIC;
+use Dancer::Plugin::DBIC 0.15;
 
 
 sub authorize {
@@ -87,7 +87,7 @@ Dancer::Plugin::Auth::RBAC::Credentials::DBIC - Dancer::Plugin::Auth::RBAC authe
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

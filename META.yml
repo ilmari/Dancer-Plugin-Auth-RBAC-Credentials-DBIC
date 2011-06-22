@@ -20,9 +20,9 @@ meta-spec:
 name: Dancer-Plugin-Auth-RBAC-Credentials-DBIC
 requires:
   Dancer::Plugin::Auth::RBAC::Credentials: 0
-  Dancer::Plugin::DBIC: 0
+  Dancer::Plugin::DBIC: 0.15
   parent: 0
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Dancer-Plugin-Auth-RBAC-Credentials-DBIC
   repository: git://github.com/ilmari/Dancer-Plugin-Auth-RBAC-Credentials-DBIC.git
-version: 0.002
+version: 0.003
