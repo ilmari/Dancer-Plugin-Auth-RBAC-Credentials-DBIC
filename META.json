@@ -37,7 +37,7 @@
          }
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "mailto" : "bug-dancer-plugin-auth-rbac-credentials-dbic at rt.cpan.org",
