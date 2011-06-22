@@ -1,4 +1,7 @@
 package Dancer::Plugin::Auth::RBAC::Credentials::DBIC;
+BEGIN {
+  $Dancer::Plugin::Auth::RBAC::Credentials::DBIC::VERSION = '0.003';
+}
 # ABSTRACT: Dancer::Plugin::Auth::RBAC authentication via DBIx::Class
 
 use strict;
@@ -7,27 +10,6 @@ use warnings;
 use parent 'Dancer::Plugin::Auth::RBAC::Credentials';
 use Dancer::Plugin::DBIC 0.15;
 
-=head1 SYNOPSIS
-
-    # in your app code
-    my $auth = auth($login, $password);
-    if ($auth) {
-        # login successful
-    }
-
-=head1 DESCRIPTION
-
-Dancer::Plugin::Auth::RBAC::Credentials::DBIC uses your L<DBIx::Class>
-schema as the application's user management system.
-
-=head1 METHODS
-
-=head2 authorize
-
-Validates a user against the defined L<DBIx::Class> schema using the
-supplied arguments and configuration file options.
-
-=cut
 
 sub authorize {
     my ($self, $options, $login, $password) = @_;
@@ -92,6 +74,40 @@ sub _check_password {
         }
     }
 }
+
+
+1;
+
+__END__
+=pod
+
+=head1 NAME
+
+Dancer::Plugin::Auth::RBAC::Credentials::DBIC - Dancer::Plugin::Auth::RBAC authentication via DBIx::Class
+
+=head1 VERSION
+
+version 0.003
+
+=head1 SYNOPSIS
+
+    # in your app code
+    my $auth = auth($login, $password);
+    if ($auth) {
+        # login successful
+    }
+
+=head1 DESCRIPTION
+
+Dancer::Plugin::Auth::RBAC::Credentials::DBIC uses your L<DBIx::Class>
+schema as the application's user management system.
+
+=head1 METHODS
+
+=head2 authorize
+
+Validates a user against the defined L<DBIx::Class> schema using the
+supplied arguments and configuration file options.
 
 =head1 CONFIGURATION
 
@@ -164,7 +180,7 @@ Default C<name>.
 
 The name of the relationship to get the roles of a user.
 Default C<roles>.  Set to C<undef> if you're not using roles.
-    
+
 =item role_name_field
 
 The name of the field on the role object that the role name is stored
@@ -173,6 +189,16 @@ Default C<name>.
 
 =back
 
+=head1 AUTHOR
+
+Dagfinn Ilmari Mannsåker <ilmari@photobox.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Photobox Limited.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
 
-1;

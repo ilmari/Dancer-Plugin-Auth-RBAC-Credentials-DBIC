@@ -1,6 +1,6 @@
 Revision history for Dancer-Plugin-Auth-RBAC-Credentials-DBIC
 
-{{$NEXT}}
+0.003     2011-06-22 10:46:48 Europe/London
  - Explicitly depend on Dancer::Plugin::DBIC 0.15
 
 0.002     2011-06-20 16:46:30 Europe/London
