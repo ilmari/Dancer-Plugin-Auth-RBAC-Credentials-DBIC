@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use parent 'Dancer::Plugin::Auth::RBAC::Credentials';
-use Dancer::Plugin::DBIC;
+use Dancer::Plugin::DBIC 0.15;
 
 =head1 SYNOPSIS
 
